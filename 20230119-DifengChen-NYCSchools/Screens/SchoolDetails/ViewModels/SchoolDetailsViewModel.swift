@@ -41,7 +41,9 @@ final class SchoolDetailsViewModel: ObservableObject {
                 return
             }
 
-            self?.sat = sats.first
+            DispatchQueue.main.async {
+                self?.sat = sats.first
+            }
         }
 
         task.resume()

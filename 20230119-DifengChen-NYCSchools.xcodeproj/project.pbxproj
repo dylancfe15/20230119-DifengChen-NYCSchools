@@ -27,6 +27,7 @@
 		D5D76AB42979E8E300437ACE /* SectionTitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AB32979E8E300437ACE /* SectionTitleText.swift */; };
 		D5D76AB62979E90500437ACE /* SATTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AB52979E90500437ACE /* SATTabItemView.swift */; };
 		D5D76AB92979EEE200437ACE /* SchoolDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AB82979EEE200437ACE /* SchoolDetailsViewModel.swift */; };
+		D5D76ABC2979F99B00437ACE /* SchoolListNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76ABB2979F99B00437ACE /* SchoolListNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D5D76AB32979E8E300437ACE /* SectionTitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleText.swift; sourceTree = "<group>"; };
 		D5D76AB52979E90500437ACE /* SATTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATTabItemView.swift; sourceTree = "<group>"; };
 		D5D76AB82979EEE200437ACE /* SchoolDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsViewModel.swift; sourceTree = "<group>"; };
+		D5D76ABB2979F99B00437ACE /* SchoolListNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				D5D76A1C2979CA7F00437ACE /* SchoolsListViewController.swift */,
+				D5D76ABA2979F98900437ACE /* Managers */,
 				D5D76AAC2979E4FD00437ACE /* ViewModels */,
 				D5D76A9B2979D89800437ACE /* Views */,
 			);
@@ -238,6 +241,14 @@
 				D5D76AB82979EEE200437ACE /* SchoolDetailsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D5D76ABA2979F98900437ACE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76ABB2979F99B00437ACE /* SchoolListNetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +383,7 @@
 			files = (
 				D5D76A962979D5C400437ACE /* Coordinator.swift in Sources */,
 				D5D76A1D2979CA7F00437ACE /* SchoolsListViewController.swift in Sources */,
+				D5D76ABC2979F99B00437ACE /* SchoolListNetworkManager.swift in Sources */,
 				D5D76AB62979E90500437ACE /* SATTabItemView.swift in Sources */,
 				D5D76A192979CA7F00437ACE /* AppDelegate.swift in Sources */,
 				D5D76AB12979E8A100437ACE /* SchoolDetailsView.swift in Sources */,

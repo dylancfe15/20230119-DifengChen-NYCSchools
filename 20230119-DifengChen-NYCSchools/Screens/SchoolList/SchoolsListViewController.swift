@@ -78,7 +78,7 @@ final class SchoolsListViewController: UIViewController {
             guard let `self` = self else { return }
 
             DispatchQueue.main.async {
-                self.listTableView.isHidden = schools.isEmpty
+                self.listTableView.isHidden = schools?.isEmpty ?? true
                 self.listTableView.reloadData()
             }
         }

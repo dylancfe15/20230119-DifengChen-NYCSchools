@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class SchoolsListViewController: UIViewController {
 
@@ -26,6 +27,7 @@ final class SchoolsListViewController: UIViewController {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         imageView.setConstraints(width: 250, height: 50)
         return imageView
     }()
@@ -43,6 +45,7 @@ final class SchoolsListViewController: UIViewController {
     // MARK: - Properties
 
     private(set) lazy var viewModel = SchoolListViewModel()
+    private var schoolsSubscription: AnyCancellable?
 
     // MARK: - Lifecycle Functions
 
@@ -50,12 +53,36 @@ final class SchoolsListViewController: UIViewController {
         super.viewDidLoad()
 
         configureUserInterface()
+        configureSubscriptions()
+
+        viewModel.getSchools()
+    }
+
+    deinit {
+        schoolsSubscription?.cancel()
     }
 
     // MARK: - Functions
 
     private func configureUserInterface() {
+        view.backgroundColor = .white
+
         view.addSubview(containerStackView)
+
+        containerStackView.setConstraints(leading: 0, top: 50, trailing: 0, bottom: 0)
+        listTableView.setConstraints(leading: 0, trailing: 0)
+    }
+
+    private func configureSubscriptions() {
+        schoolsSubscription = viewModel.schoolsPublisher.eraseToAnyPublisher().sink { [weak self] schools in
+            guard let `self` = self else { return }
+
+            DispatchQueue.main.async {
+                self.listTableView.isHidden = schools.isEmpty
+                self.listTableView.reloadData()
+            }
+        }
+
     }
 }
 

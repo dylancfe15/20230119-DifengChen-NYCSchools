@@ -201,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				D5D76AAA2979DB3100437ACE /* SchoolsListTableViewCell.swift */,
-				D5D76AB52979E90500437ACE /* SATTabItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +226,7 @@
 		D5D76AB22979E8C600437ACE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5D76AB52979E90500437ACE /* SATTabItemView.swift */,
 				D5D76AB32979E8E300437ACE /* SectionTitleText.swift */,
 			);
 			path = Views;

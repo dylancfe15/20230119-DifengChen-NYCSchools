@@ -12,4 +12,5 @@ protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get set }
 
     func start(with viewController: UIViewController)
+    func presentSchoolDetails(with school: School)
 }

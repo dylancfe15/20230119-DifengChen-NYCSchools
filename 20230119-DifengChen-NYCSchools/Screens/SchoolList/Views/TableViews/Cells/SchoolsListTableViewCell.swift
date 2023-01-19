@@ -9,7 +9,7 @@ import UIKit
 
 final class SchoolsListTableViewCell: UITableViewCell {
 
-    // MARK: - Views
+    // MARK: - UI
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -17,6 +17,9 @@ final class SchoolsListTableViewCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 5
         stackView.alignment = .leading
+        stackView.addArrangedSubview(nameLable)
+        stackView.addArrangedSubview(numberOfStudentsLabel)
+        stackView.addArrangedSubview(bottomSeparator)
         return stackView
     }()
 
@@ -40,6 +43,7 @@ final class SchoolsListTableViewCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .gray
+        view.setConstraints(height: 1)
         return view
     }()
 
@@ -77,14 +81,7 @@ final class SchoolsListTableViewCell: UITableViewCell {
         addSubview(stackView)
 
         stackView.setConstraints(leading: 0, top: 10, trailing: 0, bottom: -10)
-
-        stackView.addArrangedSubview(nameLable)
-        stackView.addArrangedSubview(numberOfStudentsLabel)
-        stackView.addArrangedSubview(bottomSeparator)
-
         nameLable.setConstraints(leading: 10, trailing: -10)
-
-        bottomSeparator.setConstraints(height: 1)
         bottomSeparator.setConstraints(leading: 20, trailing: -20)
 
         layoutIfNeeded()

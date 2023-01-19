@@ -17,6 +17,9 @@
 		D5D76A3A2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A392979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITests.swift */; };
 		D5D76A3C2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A3B2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift */; };
 		D5D76A8C2979CE8C00437ACE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A8B2979CE8C00437ACE /* UIView+Extensions.swift */; };
+		D5D76A8F2979D25200437ACE /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A8E2979D25200437ACE /* School.swift */; };
+		D5D76A912979D27400437ACE /* SchoolAnnotationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A902979D27400437ACE /* SchoolAnnotationItem.swift */; };
+		D5D76A932979D28900437ACE /* SAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A922979D28900437ACE /* SAT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		D5D76A392979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0230119_DifengChen_NYCSchoolsUITests.swift; sourceTree = "<group>"; };
 		D5D76A3B2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5D76A8B2979CE8C00437ACE /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D5D76A8E2979D25200437ACE /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		D5D76A902979D27400437ACE /* SchoolAnnotationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAnnotationItem.swift; sourceTree = "<group>"; };
+		D5D76A922979D28900437ACE /* SAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAT.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 				D5D76A212979CA8100437ACE /* Assets.xcassets */,
 				D5D76A232979CA8100437ACE /* LaunchScreen.storyboard */,
 				D5D76A262979CA8100437ACE /* Info.plist */,
+				D5D76A8D2979D22A00437ACE /* Models */,
 				D5D76A8A2979CE8C00437ACE /* Extensions */,
 			);
 			path = "20230119-DifengChen-NYCSchools";
@@ -136,6 +143,16 @@
 				D5D76A8B2979CE8C00437ACE /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D5D76A8D2979D22A00437ACE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76A8E2979D25200437ACE /* School.swift */,
+				D5D76A902979D27400437ACE /* SchoolAnnotationItem.swift */,
+				D5D76A922979D28900437ACE /* SAT.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +289,9 @@
 				D5D76A1D2979CA7F00437ACE /* ViewController.swift in Sources */,
 				D5D76A192979CA7F00437ACE /* AppDelegate.swift in Sources */,
 				D5D76A8C2979CE8C00437ACE /* UIView+Extensions.swift in Sources */,
+				D5D76A912979D27400437ACE /* SchoolAnnotationItem.swift in Sources */,
+				D5D76A932979D28900437ACE /* SAT.swift in Sources */,
+				D5D76A8F2979D25200437ACE /* School.swift in Sources */,
 				D5D76A1B2979CA7F00437ACE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

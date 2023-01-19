@@ -21,6 +21,7 @@
 		D5D76A932979D28900437ACE /* SAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A922979D28900437ACE /* SAT.swift */; };
 		D5D76A962979D5C400437ACE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A952979D5C400437ACE /* Coordinator.swift */; };
 		D5D76A982979D5E000437ACE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A972979D5E000437ACE /* MainCoordinator.swift */; };
+		D5D76A9D2979D8D200437ACE /* SchoolsListContainerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A9C2979D8D200437ACE /* SchoolsListContainerStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D5D76A922979D28900437ACE /* SAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAT.swift; sourceTree = "<group>"; };
 		D5D76A952979D5C400437ACE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D5D76A972979D5E000437ACE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D5D76A9C2979D8D200437ACE /* SchoolsListContainerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListContainerStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +171,26 @@
 		D5D76A992979D68000437ACE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D5D76A1C2979CA7F00437ACE /* SchoolsListViewController.swift */,
+				D5D76A9A2979D88100437ACE /* SchoolList */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		D5D76A9A2979D88100437ACE /* SchoolList */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76A1C2979CA7F00437ACE /* SchoolsListViewController.swift */,
+				D5D76A9B2979D89800437ACE /* Views */,
+			);
+			path = SchoolList;
+			sourceTree = "<group>";
+		};
+		D5D76A9B2979D89800437ACE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76A9C2979D8D200437ACE /* SchoolsListContainerStackView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +332,7 @@
 				D5D76A8F2979D25200437ACE /* School.swift in Sources */,
 				D5D76A982979D5E000437ACE /* MainCoordinator.swift in Sources */,
 				D5D76A1B2979CA7F00437ACE /* SceneDelegate.swift in Sources */,
+				D5D76A9D2979D8D200437ACE /* SchoolsListContainerStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

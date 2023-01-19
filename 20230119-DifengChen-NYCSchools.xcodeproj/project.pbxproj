@@ -16,6 +16,7 @@
 		D5D76A302979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A2F2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsTests.swift */; };
 		D5D76A3A2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A392979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITests.swift */; };
 		D5D76A3C2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A3B2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift */; };
+		D5D76A8C2979CE8C00437ACE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A8B2979CE8C00437ACE /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D5D76A352979CA8200437ACE /* 20230119-DifengChen-NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20230119-DifengChen-NYCSchoolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D76A392979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0230119_DifengChen_NYCSchoolsUITests.swift; sourceTree = "<group>"; };
 		D5D76A3B2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5D76A8B2979CE8C00437ACE /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D5D76A212979CA8100437ACE /* Assets.xcassets */,
 				D5D76A232979CA8100437ACE /* LaunchScreen.storyboard */,
 				D5D76A262979CA8100437ACE /* Info.plist */,
+				D5D76A8A2979CE8C00437ACE /* Extensions */,
 			);
 			path = "20230119-DifengChen-NYCSchools";
 			sourceTree = "<group>";
@@ -125,6 +128,14 @@
 				D5D76A3B2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsUITestsLaunchTests.swift */,
 			);
 			path = "20230119-DifengChen-NYCSchoolsUITests";
+			sourceTree = "<group>";
+		};
+		D5D76A8A2979CE8C00437ACE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76A8B2979CE8C00437ACE /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			files = (
 				D5D76A1D2979CA7F00437ACE /* ViewController.swift in Sources */,
 				D5D76A192979CA7F00437ACE /* AppDelegate.swift in Sources */,
+				D5D76A8C2979CE8C00437ACE /* UIView+Extensions.swift in Sources */,
 				D5D76A1B2979CA7F00437ACE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

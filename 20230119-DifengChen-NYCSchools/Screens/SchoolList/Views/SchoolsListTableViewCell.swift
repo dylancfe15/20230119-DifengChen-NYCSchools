@@ -9,7 +9,7 @@ import UIKit
 
 final class SchoolsListTableViewCell: UITableViewCell {
 
-    // MARK: - UI
+    // MARK: - User Interface
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -64,18 +64,18 @@ final class SchoolsListTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        configureUI()
+        configureUserInterface()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
-        configureUI()
+        configureUserInterface()
     }
 
     // MARK: - Functions
 
-    private func configureUI() {
+    private func configureUserInterface() {
         selectionStyle = .none
 
         addSubview(stackView)

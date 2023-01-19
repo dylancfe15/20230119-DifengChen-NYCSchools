@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         coordinator = MainCoordinator(navigationController: navController)
 
         let viewController = SchoolsListViewController()
-        viewController.coordinator = coordinator
+        viewController.viewModel.coordinator = coordinator
 
         coordinator?.start(with: viewController)
 

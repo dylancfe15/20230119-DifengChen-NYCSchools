@@ -21,10 +21,12 @@
 		D5D76A932979D28900437ACE /* SAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A922979D28900437ACE /* SAT.swift */; };
 		D5D76A962979D5C400437ACE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A952979D5C400437ACE /* Coordinator.swift */; };
 		D5D76A982979D5E000437ACE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A972979D5E000437ACE /* MainCoordinator.swift */; };
-		D5D76AA42979D9E800437ACE /* SchoolsListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AA32979D9E800437ACE /* SchoolsListTableView.swift */; };
-		D5D76AA62979DA9B00437ACE /* SchoolsListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AA52979DA9B00437ACE /* SchoolsListTableViewDelegate.swift */; };
-		D5D76AA82979DABD00437ACE /* SchoolsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AA72979DABD00437ACE /* SchoolsListDataSource.swift */; };
 		D5D76AAB2979DB3100437ACE /* SchoolsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AAA2979DB3100437ACE /* SchoolsListTableViewCell.swift */; };
+		D5D76AAE2979E5A100437ACE /* SchoolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AAD2979E5A100437ACE /* SchoolListViewModel.swift */; };
+		D5D76AB12979E8A100437ACE /* SchoolDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AB02979E8A100437ACE /* SchoolDetailsView.swift */; };
+		D5D76AB42979E8E300437ACE /* SectionTitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AB32979E8E300437ACE /* SectionTitleText.swift */; };
+		D5D76AB62979E90500437ACE /* SATTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AB52979E90500437ACE /* SATTabItemView.swift */; };
+		D5D76AB92979EEE200437ACE /* SchoolDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AB82979EEE200437ACE /* SchoolDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +65,12 @@
 		D5D76A922979D28900437ACE /* SAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAT.swift; sourceTree = "<group>"; };
 		D5D76A952979D5C400437ACE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D5D76A972979D5E000437ACE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		D5D76AA32979D9E800437ACE /* SchoolsListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListTableView.swift; sourceTree = "<group>"; };
-		D5D76AA52979DA9B00437ACE /* SchoolsListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListTableViewDelegate.swift; sourceTree = "<group>"; };
-		D5D76AA72979DABD00437ACE /* SchoolsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListDataSource.swift; sourceTree = "<group>"; };
 		D5D76AAA2979DB3100437ACE /* SchoolsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListTableViewCell.swift; sourceTree = "<group>"; };
+		D5D76AAD2979E5A100437ACE /* SchoolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewModel.swift; sourceTree = "<group>"; };
+		D5D76AB02979E8A100437ACE /* SchoolDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsView.swift; sourceTree = "<group>"; };
+		D5D76AB32979E8E300437ACE /* SectionTitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleText.swift; sourceTree = "<group>"; };
+		D5D76AB52979E90500437ACE /* SATTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATTabItemView.swift; sourceTree = "<group>"; };
+		D5D76AB82979EEE200437ACE /* SchoolDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D5D76A9A2979D88100437ACE /* SchoolList */,
+				D5D76AAF2979E88800437ACE /* SchoolDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				D5D76A1C2979CA7F00437ACE /* SchoolsListViewController.swift */,
+				D5D76AAC2979E4FD00437ACE /* ViewModels */,
 				D5D76A9B2979D89800437ACE /* Views */,
 			);
 			path = SchoolList;
@@ -194,28 +200,44 @@
 		D5D76A9B2979D89800437ACE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D5D76AA22979D9D500437ACE /* TableViews */,
+				D5D76AAA2979DB3100437ACE /* SchoolsListTableViewCell.swift */,
+				D5D76AB52979E90500437ACE /* SATTabItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D5D76AA22979D9D500437ACE /* TableViews */ = {
+		D5D76AAC2979E4FD00437ACE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				D5D76AA32979D9E800437ACE /* SchoolsListTableView.swift */,
-				D5D76AA52979DA9B00437ACE /* SchoolsListTableViewDelegate.swift */,
-				D5D76AA72979DABD00437ACE /* SchoolsListDataSource.swift */,
-				D5D76AA92979DB2800437ACE /* Cells */,
+				D5D76AAD2979E5A100437ACE /* SchoolListViewModel.swift */,
 			);
-			path = TableViews;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		D5D76AA92979DB2800437ACE /* Cells */ = {
+		D5D76AAF2979E88800437ACE /* SchoolDetails */ = {
 			isa = PBXGroup;
 			children = (
-				D5D76AAA2979DB3100437ACE /* SchoolsListTableViewCell.swift */,
+				D5D76AB02979E8A100437ACE /* SchoolDetailsView.swift */,
+				D5D76AB72979E92A00437ACE /* ViewModels */,
+				D5D76AB22979E8C600437ACE /* Views */,
 			);
-			path = Cells;
+			path = SchoolDetails;
+			sourceTree = "<group>";
+		};
+		D5D76AB22979E8C600437ACE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76AB32979E8E300437ACE /* SectionTitleText.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5D76AB72979E92A00437ACE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76AB82979EEE200437ACE /* SchoolDetailsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,19 +370,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D76AA82979DABD00437ACE /* SchoolsListDataSource.swift in Sources */,
-				D5D76AA62979DA9B00437ACE /* SchoolsListTableViewDelegate.swift in Sources */,
 				D5D76A962979D5C400437ACE /* Coordinator.swift in Sources */,
 				D5D76A1D2979CA7F00437ACE /* SchoolsListViewController.swift in Sources */,
+				D5D76AB62979E90500437ACE /* SATTabItemView.swift in Sources */,
 				D5D76A192979CA7F00437ACE /* AppDelegate.swift in Sources */,
+				D5D76AB12979E8A100437ACE /* SchoolDetailsView.swift in Sources */,
 				D5D76A8C2979CE8C00437ACE /* UIView+Extensions.swift in Sources */,
 				D5D76AAB2979DB3100437ACE /* SchoolsListTableViewCell.swift in Sources */,
 				D5D76A912979D27400437ACE /* SchoolAnnotationItem.swift in Sources */,
+				D5D76AB92979EEE200437ACE /* SchoolDetailsViewModel.swift in Sources */,
 				D5D76A932979D28900437ACE /* SAT.swift in Sources */,
 				D5D76A8F2979D25200437ACE /* School.swift in Sources */,
+				D5D76AB42979E8E300437ACE /* SectionTitleText.swift in Sources */,
 				D5D76A982979D5E000437ACE /* MainCoordinator.swift in Sources */,
 				D5D76A1B2979CA7F00437ACE /* SceneDelegate.swift in Sources */,
-				D5D76AA42979D9E800437ACE /* SchoolsListTableView.swift in Sources */,
+				D5D76AAE2979E5A100437ACE /* SchoolListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

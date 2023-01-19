@@ -9,7 +9,7 @@ import UIKit
 
 final class SchoolsListViewController: UIViewController {
 
-    // MARK: - UI
+    // MARK: - User Interface
 
     private lazy var containerStackView: UIStackView = {
         let stackView = UIStackView()
@@ -30,35 +30,58 @@ final class SchoolsListViewController: UIViewController {
         return imageView
     }()
 
-    private lazy var listTableView: SchoolsListTableView = {
-        let tableView = SchoolsListTableView()
-        tableView.schoolsListDelegate = self
+    private lazy var listTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(SchoolsListTableViewCell.self, forCellReuseIdentifier: SchoolsListTableViewCell.identifier)
         return tableView
     }()
 
     // MARK: - Properties
 
-    weak var coordinator: Coordinator?
+    private(set) lazy var viewModel = SchoolListViewModel()
 
     // MARK: - Lifecycle Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureUI()
+        configureUserInterface()
     }
 
     // MARK: - Functions
 
-    private func configureUI() {
+    private func configureUserInterface() {
         view.addSubview(containerStackView)
     }
 }
 
-// MARK: - SchoolsListDelegate+Extension
+// MARK: - UITableViewDelegate+Extension
 
-extension SchoolsListViewController: SchoolsListDelegate {
-    func didSelect(school: School) {
+extension SchoolsListViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.presentSchoolDetails(for: indexPath.row)
+    }
+}
+
+// MARK: - UITableViewDataSource+Extension
+
+extension SchoolsListViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.schools.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let school = viewModel.schools[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: SchoolsListTableViewCell.identifier, for: indexPath) as? SchoolsListTableViewCell
+
+        cell?.configure(school: school)
+
+        return cell ?? UITableViewCell()
     }
 }

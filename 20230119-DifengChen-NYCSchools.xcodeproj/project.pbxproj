@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		D5D76A192979CA7F00437ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A182979CA7F00437ACE /* AppDelegate.swift */; };
 		D5D76A1B2979CA7F00437ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A1A2979CA7F00437ACE /* SceneDelegate.swift */; };
-		D5D76A1D2979CA7F00437ACE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A1C2979CA7F00437ACE /* ViewController.swift */; };
-		D5D76A202979CA7F00437ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D76A1E2979CA7F00437ACE /* Main.storyboard */; };
+		D5D76A1D2979CA7F00437ACE /* SchoolsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A1C2979CA7F00437ACE /* SchoolsListViewController.swift */; };
 		D5D76A222979CA8100437ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D76A212979CA8100437ACE /* Assets.xcassets */; };
 		D5D76A252979CA8100437ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D76A232979CA8100437ACE /* LaunchScreen.storyboard */; };
 		D5D76A302979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A2F2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsTests.swift */; };
@@ -20,6 +19,8 @@
 		D5D76A8F2979D25200437ACE /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A8E2979D25200437ACE /* School.swift */; };
 		D5D76A912979D27400437ACE /* SchoolAnnotationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A902979D27400437ACE /* SchoolAnnotationItem.swift */; };
 		D5D76A932979D28900437ACE /* SAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A922979D28900437ACE /* SAT.swift */; };
+		D5D76A962979D5C400437ACE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A952979D5C400437ACE /* Coordinator.swift */; };
+		D5D76A982979D5E000437ACE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76A972979D5E000437ACE /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +44,7 @@
 		D5D76A152979CA7F00437ACE /* 20230119-DifengChen-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20230119-DifengChen-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D76A182979CA7F00437ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D76A1A2979CA7F00437ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5D76A1C2979CA7F00437ACE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D5D76A1F2979CA7F00437ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5D76A1C2979CA7F00437ACE /* SchoolsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListViewController.swift; sourceTree = "<group>"; };
 		D5D76A212979CA8100437ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5D76A242979CA8100437ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5D76A262979CA8100437ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +57,8 @@
 		D5D76A8E2979D25200437ACE /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		D5D76A902979D27400437ACE /* SchoolAnnotationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAnnotationItem.swift; sourceTree = "<group>"; };
 		D5D76A922979D28900437ACE /* SAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAT.swift; sourceTree = "<group>"; };
+		D5D76A952979D5C400437ACE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D5D76A972979D5E000437ACE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +111,11 @@
 			children = (
 				D5D76A182979CA7F00437ACE /* AppDelegate.swift */,
 				D5D76A1A2979CA7F00437ACE /* SceneDelegate.swift */,
-				D5D76A1C2979CA7F00437ACE /* ViewController.swift */,
-				D5D76A1E2979CA7F00437ACE /* Main.storyboard */,
 				D5D76A212979CA8100437ACE /* Assets.xcassets */,
 				D5D76A232979CA8100437ACE /* LaunchScreen.storyboard */,
 				D5D76A262979CA8100437ACE /* Info.plist */,
+				D5D76A992979D68000437ACE /* Screens */,
+				D5D76A942979D5AA00437ACE /* Coordinators */,
 				D5D76A8D2979D22A00437ACE /* Models */,
 				D5D76A8A2979CE8C00437ACE /* Extensions */,
 			);
@@ -153,6 +155,23 @@
 				D5D76A922979D28900437ACE /* SAT.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D5D76A942979D5AA00437ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76A952979D5C400437ACE /* Coordinator.swift */,
+				D5D76A972979D5E000437ACE /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D5D76A992979D68000437ACE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76A1C2979CA7F00437ACE /* SchoolsListViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +280,6 @@
 			files = (
 				D5D76A252979CA8100437ACE /* LaunchScreen.storyboard in Resources */,
 				D5D76A222979CA8100437ACE /* Assets.xcassets in Resources */,
-				D5D76A202979CA7F00437ACE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D76A1D2979CA7F00437ACE /* ViewController.swift in Sources */,
+				D5D76A962979D5C400437ACE /* Coordinator.swift in Sources */,
+				D5D76A1D2979CA7F00437ACE /* SchoolsListViewController.swift in Sources */,
 				D5D76A192979CA7F00437ACE /* AppDelegate.swift in Sources */,
 				D5D76A8C2979CE8C00437ACE /* UIView+Extensions.swift in Sources */,
 				D5D76A912979D27400437ACE /* SchoolAnnotationItem.swift in Sources */,
 				D5D76A932979D28900437ACE /* SAT.swift in Sources */,
 				D5D76A8F2979D25200437ACE /* School.swift in Sources */,
+				D5D76A982979D5E000437ACE /* MainCoordinator.swift in Sources */,
 				D5D76A1B2979CA7F00437ACE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D5D76A1E2979CA7F00437ACE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5D76A1F2979CA7F00437ACE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D5D76A232979CA8100437ACE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -474,7 +486,6 @@
 				INFOPLIST_FILE = "20230119-DifengChen-NYCSchools/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -502,7 +513,6 @@
 				INFOPLIST_FILE = "20230119-DifengChen-NYCSchools/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

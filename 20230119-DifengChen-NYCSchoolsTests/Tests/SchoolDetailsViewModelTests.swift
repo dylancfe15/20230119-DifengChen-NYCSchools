@@ -33,7 +33,9 @@ final class SchoolDetailsViewModelTests: XCTestCase {
     func testGetSAT_notNil() {
         expectation = expectation(description: "get_sat")
 
-        detailsSubscription = viewModel.sat.publisher.eraseToAnyPublisher().sink(receiveValue: { sat in
+        detailsSubscription = viewModel.$sat.eraseToAnyPublisher().sink(receiveValue: { sat in
+            guard let sat = sat else { return }
+
             XCTAssertNotNil(sat.sat_critical_reading_avg_score)
             XCTAssertNotNil(sat.sat_math_avg_score)
             XCTAssertNotNil(sat.sat_writing_avg_score)

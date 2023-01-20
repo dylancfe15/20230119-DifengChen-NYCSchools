@@ -17,7 +17,6 @@ final class SchoolListNetworkManager: SchoolListNetworkManaging {
     /// Fetch a list of schools from the server
     /// - Parameter completion: returns a list of schools if available
     func getSchools(completion: @escaping(_ schools: [School]?) -> Void) {
-        // TODO: - Refactor URLs to configuration
         guard let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else {
             return
         }

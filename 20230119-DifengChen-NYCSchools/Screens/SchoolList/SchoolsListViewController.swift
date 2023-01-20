@@ -20,6 +20,7 @@ final class SchoolsListViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(logoImageView)
         stackView.addArrangedSubview(listTableView)
+        stackView.addArrangedSubview(loaderView)
         return stackView
     }()
 
@@ -39,8 +40,11 @@ final class SchoolsListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(SchoolsListTableViewCell.self, forCellReuseIdentifier: SchoolsListTableViewCell.identifier)
+        tableView.isHidden = true
         return tableView
     }()
+
+    private lazy var loaderView = LoaderView(frame: .zero)
 
     // MARK: - Properties
 
@@ -69,20 +73,25 @@ final class SchoolsListViewController: UIViewController {
 
         view.addSubview(containerStackView)
 
-        containerStackView.setConstraints(leading: 0, top: 50, trailing: 0, bottom: 0)
+        containerStackView.setConstraints(leading: 0, top: 60, trailing: 0, bottom: 0)
         listTableView.setConstraints(leading: 0, trailing: 0)
+        loaderView.setConstraints(leading: 0, trailing: 0)
     }
 
     private func configureSubscriptions() {
-        schoolsSubscription = viewModel.schoolsPublisher.eraseToAnyPublisher().sink { [weak self] schools in
-            guard let `self` = self else { return }
+        schoolsSubscription = viewModel.schoolsPublisher
+            .eraseToAnyPublisher()
+            .debounce(for: .seconds(2), scheduler: RunLoop.main)
+            .sink { [weak self] schools in
+                guard let `self` = self else { return }
 
-            DispatchQueue.main.async {
-                self.listTableView.isHidden = schools?.isEmpty ?? true
-                self.listTableView.reloadData()
+                DispatchQueue.main.async {
+                    self.listTableView.isHidden = schools?.isEmpty ?? true
+                    self.loaderView.isHidden = !(schools?.isEmpty ?? true)
+
+                    self.listTableView.reloadData()
+                }
             }
-        }
-
     }
 }
 

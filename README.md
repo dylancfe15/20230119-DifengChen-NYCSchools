@@ -2,4 +2,4 @@
 This app displays a list of NYC schools with details.
 
 ### Demostration
-![Demo](demo.gif)
+![Demo](https://github.com/dylancfe15/20230119-DifengChen-NYCSchools/blob/master/NYCSchoolsDemo.gif)

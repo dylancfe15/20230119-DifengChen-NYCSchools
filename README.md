@@ -6,8 +6,7 @@ This app displays a list of NYC schools with details.
 
 # Highlights
 
-- Coordinator Design Pattern
-- MVVM Design Pattern
+- Coordinator & MVVM Design Pattern
 - Production & Development Configurations
 - Combine
 - Unit Testing

@@ -35,7 +35,6 @@ final class SchoolsListViewController: UIViewController {
 
     private lazy var listTableView: UITableView = {
         let tableView = UITableView()
-        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self

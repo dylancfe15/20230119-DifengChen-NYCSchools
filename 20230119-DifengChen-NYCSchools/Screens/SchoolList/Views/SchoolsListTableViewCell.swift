@@ -17,13 +17,12 @@ final class SchoolsListTableViewCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 5
         stackView.alignment = .leading
-        stackView.addArrangedSubview(nameLable)
+        stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(numberOfStudentsLabel)
-        stackView.addArrangedSubview(bottomSeparator)
         return stackView
     }()
 
-    private lazy var nameLable: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
@@ -37,14 +36,6 @@ final class SchoolsListTableViewCell: UITableViewCell {
         label.font = UIFont.systemFont(ofSize: 15)
         label.textColor = .gray
         return label
-    }()
-
-    private lazy var bottomSeparator: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
-        view.setConstraints(height: 1)
-        return view
     }()
 
     // MARK: - Properties
@@ -81,9 +72,7 @@ final class SchoolsListTableViewCell: UITableViewCell {
 
         addSubview(stackView)
 
-        stackView.setConstraints(leading: 0, top: 10, trailing: 0, bottom: -10)
-        nameLable.setConstraints(leading: 10, trailing: -10)
-        bottomSeparator.setConstraints(leading: 20, trailing: -20)
+        stackView.setConstraints(leading: 20, top: 10, trailing: -20, bottom: -10)
 
         layoutIfNeeded()
     }
@@ -96,7 +85,7 @@ final class SchoolsListTableViewCell: UITableViewCell {
 
     /// Reload the UI to reflace the up-to-date data
     private func reloadUI() {
-        nameLable.text = school?.school_name
+        nameLabel.text = school?.school_name
 
         if let numberOfStudents = school?.total_students {
             numberOfStudentsLabel.text = "Number of Students: \(numberOfStudents)"

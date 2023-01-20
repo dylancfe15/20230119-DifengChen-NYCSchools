@@ -6,31 +6,43 @@
 //
 
 import XCTest
+import Combine
 @testable import _0230119_DifengChen_NYCSchools
 
-final class _0230119_DifengChen_NYCSchoolsTests: XCTestCase {
+final class SchoolDetailsViewModelTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private var viewModel: SchoolDetailsViewModel!
+    private var detailsSubscription: AnyCancellable!
+    private var expectation: XCTestExpectation!
+
+    override func setUp() {
+        super.setUp()
+
+        viewModel = SchoolDetailsViewModel()
+        viewModel.networkManager = SchoolDetailsMockNetworkManager()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        super.tearDown()
+
+        viewModel = nil
+        expectation = nil
+        detailsSubscription.cancel()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func testGetSAT_notNil() {
+        expectation = expectation(description: "get_sat")
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+        detailsSubscription = viewModel.sat.publisher.eraseToAnyPublisher().sink(receiveValue: { sat in
+            XCTAssertNotNil(sat.sat_critical_reading_avg_score)
+            XCTAssertNotNil(sat.sat_math_avg_score)
+            XCTAssertNotNil(sat.sat_writing_avg_score)
 
+            self.expectation.fulfill()
+        })
+
+        viewModel.getSAT("abc")
+
+        waitForExpectations(timeout: 3)
+    }
 }

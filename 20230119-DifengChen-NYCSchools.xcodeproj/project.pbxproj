@@ -28,6 +28,7 @@
 		D5D76ABC2979F99B00437ACE /* SchoolListNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76ABB2979F99B00437ACE /* SchoolListNetworkManager.swift */; };
 		D5D76ABF297A14AE00437ACE /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76ABE297A14AE00437ACE /* LoaderView.swift */; };
 		D5D76AC2297A1AB900437ACE /* SchoolDetailsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AC1297A1AB900437ACE /* SchoolDetailsNetworkManager.swift */; };
+		D5D76AC5297A273C00437ACE /* SchoolDetailsMockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AC4297A273C00437ACE /* SchoolDetailsMockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		D5D76ABB2979F99B00437ACE /* SchoolListNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListNetworkManager.swift; sourceTree = "<group>"; };
 		D5D76ABE297A14AE00437ACE /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		D5D76AC1297A1AB900437ACE /* SchoolDetailsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsNetworkManager.swift; sourceTree = "<group>"; };
+		D5D76AC4297A273C00437ACE /* SchoolDetailsMockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsMockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		D5D76A2E2979CA8200437ACE /* 20230119-DifengChen-NYCSchoolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5D76AC3297A271800437ACE /* MockNetworkManagers */,
 				D5D76A2F2979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsTests.swift */,
 			);
 			path = "20230119-DifengChen-NYCSchoolsTests";
@@ -257,6 +260,14 @@
 				D5D76AC1297A1AB900437ACE /* SchoolDetailsNetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		D5D76AC3297A271800437ACE /* MockNetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76AC4297A273C00437ACE /* SchoolDetailsMockNetworkManager.swift */,
+			);
+			path = MockNetworkManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D76A302979CA8200437ACE /* _0230119_DifengChen_NYCSchoolsTests.swift in Sources */,
+				D5D76AC5297A273C00437ACE /* SchoolDetailsMockNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

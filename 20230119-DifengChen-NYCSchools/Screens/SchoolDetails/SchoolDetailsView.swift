@@ -30,16 +30,6 @@ struct SchoolDetailsView: View {
         }
     }
 
-    // MARK: - Initializers
-
-    init(school: School) {
-        self.school = school
-
-        if let coordinate {
-            region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-        }
-    }
-
     // MARK: - Views
 
     var body: some View {
@@ -166,6 +156,9 @@ struct SchoolDetailsView: View {
                 }
                     .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .onAppear {
+                        region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                    }
             }
         }
     }

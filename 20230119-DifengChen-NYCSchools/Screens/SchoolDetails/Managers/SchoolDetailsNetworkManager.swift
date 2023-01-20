@@ -21,7 +21,7 @@ final class SchoolDetailsNetworkManager: SchoolDetailsNetworkManaging {
     ///   - dbn: the identifier of a school object
     ///   - completion: callback to return a SAT object if available
     func getSAT(_ dbn: String, completion: @escaping(_ sat: SAT?) -> Void) {
-        guard var urlComponents = URLComponents(string: "https://data.cityofnewyork.us/resource/f9bf-2cp4.json") else {
+        guard let urlString = ConfigurationsManager.shared.getSATURL, var urlComponents = URLComponents(string: urlString) else {
             return
         }
 

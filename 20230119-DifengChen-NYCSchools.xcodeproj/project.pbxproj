@@ -33,6 +33,7 @@
 		D5D76ACB297A2E3400437ACE /* SchoolListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76ACA297A2E3400437ACE /* SchoolListViewModelTests.swift */; };
 		D5D76ACD297A2F0100437ACE /* get_schools_response.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D76ACC297A2F0100437ACE /* get_schools_response.json */; };
 		D5D76ACF297A2F5200437ACE /* SchoolListMockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76ACE297A2F5200437ACE /* SchoolListMockNetworkManager.swift */; };
+		D5D76AD5297A327100437ACE /* ConfigurationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D76AD4297A327100437ACE /* ConfigurationsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,9 @@
 		D5D76ACA297A2E3400437ACE /* SchoolListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewModelTests.swift; sourceTree = "<group>"; };
 		D5D76ACC297A2F0100437ACE /* get_schools_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_schools_response.json; sourceTree = "<group>"; };
 		D5D76ACE297A2F5200437ACE /* SchoolListMockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListMockNetworkManager.swift; sourceTree = "<group>"; };
+		D5D76AD1297A319F00437ACE /* ProductionConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProductionConfiguration.xcconfig; sourceTree = "<group>"; };
+		D5D76AD2297A323E00437ACE /* DevelopmentConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DevelopmentConfiguration.xcconfig; sourceTree = "<group>"; };
+		D5D76AD4297A327100437ACE /* ConfigurationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				D5D76A212979CA8100437ACE /* Assets.xcassets */,
 				D5D76A232979CA8100437ACE /* LaunchScreen.storyboard */,
 				D5D76A262979CA8100437ACE /* Info.plist */,
+				D5D76AD3297A325800437ACE /* Managers */,
+				D5D76AD0297A315E00437ACE /* Configurations */,
 				D5D76A992979D68000437ACE /* Screens */,
 				D5D76ABD297A13D200437ACE /* ReusableViews */,
 				D5D76A942979D5AA00437ACE /* Coordinators */,
@@ -282,6 +288,23 @@
 			path = MockResponses;
 			sourceTree = "<group>";
 		};
+		D5D76AD0297A315E00437ACE /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76AD1297A319F00437ACE /* ProductionConfiguration.xcconfig */,
+				D5D76AD2297A323E00437ACE /* DevelopmentConfiguration.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		D5D76AD3297A325800437ACE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D5D76AD4297A327100437ACE /* ConfigurationsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,6 +418,7 @@
 				D5D76AAB2979DB3100437ACE /* SchoolsListTableViewCell.swift in Sources */,
 				D5D76A912979D27400437ACE /* SchoolAnnotationItem.swift in Sources */,
 				D5D76AB92979EEE200437ACE /* SchoolDetailsViewModel.swift in Sources */,
+				D5D76AD5297A327100437ACE /* ConfigurationsManager.swift in Sources */,
 				D5D76A932979D28900437ACE /* SAT.swift in Sources */,
 				D5D76A8F2979D25200437ACE /* School.swift in Sources */,
 				D5D76AB42979E8E300437ACE /* SectionTitleText.swift in Sources */,
@@ -438,7 +462,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D5D76A3D2979CA8200437ACE /* Debug */ = {
+		D5D76A3D2979CA8200437ACE /* Debug Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -496,9 +520,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug Production";
 		};
-		D5D76A3E2979CA8200437ACE /* Release */ = {
+		D5D76A3E2979CA8200437ACE /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -550,10 +574,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release Production";
 		};
-		D5D76A402979CA8200437ACE /* Debug */ = {
+		D5D76A402979CA8200437ACE /* Debug Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D76AD1297A319F00437ACE /* ProductionConfiguration.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -561,6 +586,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5H9LF74GEN;
 				GENERATE_INFOPLIST_FILE = YES;
+				GET_SAT_URL = "$(GET_SAT_URL)";
+				GET_SCHOOLS_URL = "$(GET_SCHOOLS_URL)";
 				INFOPLIST_FILE = "20230119-DifengChen-NYCSchools/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -577,10 +604,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Debug Production";
 		};
-		D5D76A412979CA8200437ACE /* Release */ = {
+		D5D76A412979CA8200437ACE /* Release Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D76AD1297A319F00437ACE /* ProductionConfiguration.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -588,6 +616,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5H9LF74GEN;
 				GENERATE_INFOPLIST_FILE = YES;
+				GET_SAT_URL = "$(GET_SAT_URL)";
+				GET_SCHOOLS_URL = "$(GET_SCHOOLS_URL)";
 				INFOPLIST_FILE = "20230119-DifengChen-NYCSchools/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -604,9 +634,9 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = "Release Production";
 		};
-		D5D76A432979CA8200437ACE /* Debug */ = {
+		D5D76A432979CA8200437ACE /* Debug Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -624,9 +654,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20230119-DifengChen-NYCSchools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/20230119-DifengChen-NYCSchools";
 			};
-			name = Debug;
+			name = "Debug Production";
 		};
-		D5D76A442979CA8200437ACE /* Release */ = {
+		D5D76A442979CA8200437ACE /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -644,7 +674,221 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20230119-DifengChen-NYCSchools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/20230119-DifengChen-NYCSchools";
 			};
-			name = Release;
+			name = "Release Production";
+		};
+		D5D76AD6297A338A00437ACE /* Debug Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug Development";
+		};
+		D5D76AD7297A338A00437ACE /* Debug Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D76AD2297A323E00437ACE /* DevelopmentConfiguration.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H9LF74GEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				GET_SAT_URL = "$(GET_SAT_URL)";
+				GET_SCHOOLS_URL = "$(GET_SCHOOLS_URL)";
+				INFOPLIST_FILE = "20230119-DifengChen-NYCSchools/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Difeng-Chen.-0230119-DifengChen-NYCSchools";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug Development";
+		};
+		D5D76AD8297A338A00437ACE /* Debug Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H9LF74GEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Difeng-Chen.-0230119-DifengChen-NYCSchoolsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20230119-DifengChen-NYCSchools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/20230119-DifengChen-NYCSchools";
+			};
+			name = "Debug Development";
+		};
+		D5D76AD9297A339300437ACE /* Release Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Development";
+		};
+		D5D76ADA297A339300437ACE /* Release Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D76AD2297A323E00437ACE /* DevelopmentConfiguration.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H9LF74GEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				GET_SAT_URL = "$(GET_SAT_URL)";
+				GET_SCHOOLS_URL = "$(GET_SCHOOLS_URL)";
+				INFOPLIST_FILE = "20230119-DifengChen-NYCSchools/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Difeng-Chen.-0230119-DifengChen-NYCSchools";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release Development";
+		};
+		D5D76ADB297A339300437ACE /* Release Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H9LF74GEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Difeng-Chen.-0230119-DifengChen-NYCSchoolsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20230119-DifengChen-NYCSchools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/20230119-DifengChen-NYCSchools";
+			};
+			name = "Release Development";
 		};
 /* End XCBuildConfiguration section */
 
@@ -652,29 +896,35 @@
 		D5D76A102979CA7F00437ACE /* Build configuration list for PBXProject "20230119-DifengChen-NYCSchools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D5D76A3D2979CA8200437ACE /* Debug */,
-				D5D76A3E2979CA8200437ACE /* Release */,
+				D5D76A3D2979CA8200437ACE /* Debug Production */,
+				D5D76AD6297A338A00437ACE /* Debug Development */,
+				D5D76A3E2979CA8200437ACE /* Release Production */,
+				D5D76AD9297A339300437ACE /* Release Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Production";
 		};
 		D5D76A3F2979CA8200437ACE /* Build configuration list for PBXNativeTarget "20230119-DifengChen-NYCSchools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D5D76A402979CA8200437ACE /* Debug */,
-				D5D76A412979CA8200437ACE /* Release */,
+				D5D76A402979CA8200437ACE /* Debug Production */,
+				D5D76AD7297A338A00437ACE /* Debug Development */,
+				D5D76A412979CA8200437ACE /* Release Production */,
+				D5D76ADA297A339300437ACE /* Release Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Production";
 		};
 		D5D76A422979CA8200437ACE /* Build configuration list for PBXNativeTarget "20230119-DifengChen-NYCSchoolsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D5D76A432979CA8200437ACE /* Debug */,
-				D5D76A442979CA8200437ACE /* Release */,
+				D5D76A432979CA8200437ACE /* Debug Production */,
+				D5D76AD8297A338A00437ACE /* Debug Development */,
+				D5D76A442979CA8200437ACE /* Release Production */,
+				D5D76ADB297A339300437ACE /* Release Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Production";
 		};
 /* End XCConfigurationList section */
 	};

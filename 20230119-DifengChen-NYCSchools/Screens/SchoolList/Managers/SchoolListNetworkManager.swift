@@ -17,9 +17,7 @@ final class SchoolListNetworkManager: SchoolListNetworkManaging {
     /// Fetch a list of schools from the server
     /// - Parameter completion: returns a list of schools if available
     func getSchools(completion: @escaping(_ schools: [School]?) -> Void) {
-        guard let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else {
-            return
-        }
+        guard let urlString = ConfigurationsManager.shared.getSchoolsURL, let url = URL(string: urlString) else { return }
 
         var request = URLRequest(url: url)
 

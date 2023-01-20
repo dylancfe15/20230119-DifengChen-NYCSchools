@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>HOST</key>
+	<string>$(HOST)</string>
+	<key>GET SAT URL</key>
+	<string>$(GET_SAT_URL)</string>
+	<key>GET SCHOOLS URL</key>
+	<string>$(GET_SCHOOLS_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

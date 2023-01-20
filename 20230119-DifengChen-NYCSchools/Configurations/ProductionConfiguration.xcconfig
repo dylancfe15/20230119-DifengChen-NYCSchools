@@ -1,0 +1,15 @@
+//
+//  ProductionConfiguration.xcconfig
+//  20230119-DifengChen-NYCSchools
+//
+//  Created by Difeng Chen on 1/19/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+HOST = https:
+
+GET_SCHOOLS_URL = data.cityofnewyork.us/resource/s3k6-pzi2.json
+
+GET_SAT_URL = data.cityofnewyork.us/resource/f9bf-2cp4.json

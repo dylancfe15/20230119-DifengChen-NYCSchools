@@ -105,7 +105,7 @@ final class SchoolsListViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDelegate+Extension
+// MARK: - SchoolsListViewController+UITableViewDelegate
 
 extension SchoolsListViewController: UITableViewDelegate {
 
@@ -114,7 +114,7 @@ extension SchoolsListViewController: UITableViewDelegate {
     }
 }
 
-// MARK: - UITableViewDataSource+Extension
+// MARK: - SchoolsListViewController+UITableViewDataSource
 
 extension SchoolsListViewController: UITableViewDataSource {
 

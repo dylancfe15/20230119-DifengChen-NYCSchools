@@ -84,13 +84,24 @@ final class SchoolsListViewController: UIViewController {
             .sink { [weak self] schools in
                 guard let `self` = self else { return }
 
+                guard let schools = schools else {
+                    self.presentSerivceErrorAlert()
+                    return
+                }
+
                 DispatchQueue.main.async {
-                    self.listTableView.isHidden = schools?.isEmpty ?? true
-                    self.loaderView.isHidden = !(schools?.isEmpty ?? true)
+                    self.listTableView.isHidden = schools.isEmpty
+                    self.loaderView.isHidden = true
 
                     self.listTableView.reloadData()
                 }
             }
+    }
+
+    private func presentSerivceErrorAlert() {
+        let alert = UIAlertController(title: "Error", message: "Ops! Something went wrong while loading the data.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 

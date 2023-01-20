@@ -42,7 +42,7 @@ final class SchoolsListTableViewCell: UITableViewCell {
     private lazy var bottomSeparator: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .gray
+        view.backgroundColor = .lightGray
         view.setConstraints(height: 1)
         return view
     }()
@@ -77,6 +77,7 @@ final class SchoolsListTableViewCell: UITableViewCell {
 
     private func configureUserInterface() {
         selectionStyle = .none
+        accessoryType = .disclosureIndicator
 
         addSubview(stackView)
 

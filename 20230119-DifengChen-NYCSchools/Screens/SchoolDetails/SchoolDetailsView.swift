@@ -22,11 +22,21 @@ struct SchoolDetailsView: View {
     private var coordinate: CLLocationCoordinate2D? {
         if let latitudeString = school.latitude,
            let latitude = Double(latitudeString),
-            let longitudeString = school.longitude,
-            let longitude = Double(longitudeString) {
+           let longitudeString = school.longitude,
+           let longitude = Double(longitudeString) {
             return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         } else {
             return nil
+        }
+    }
+
+    // MARK: - Initializers
+
+    init(school: School) {
+        self.school = school
+
+        if let coordinate {
+            region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         }
     }
 
@@ -100,7 +110,6 @@ struct SchoolDetailsView: View {
                             .foregroundColor(.brown)
                     }
                         .alert(isPresented: $isMailAlertPresented) {
-                            // TODO: - Refacter alerts to it's own coordinator
                             Alert(title: Text("Unable to open Mail."), message: Text("Please make sure that you have installed the Mail app properly on your device."), dismissButton: .cancel())
                         }
                 }
@@ -157,9 +166,6 @@ struct SchoolDetailsView: View {
                 }
                     .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .onAppear {
-                        region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-                    }
             }
         }
     }

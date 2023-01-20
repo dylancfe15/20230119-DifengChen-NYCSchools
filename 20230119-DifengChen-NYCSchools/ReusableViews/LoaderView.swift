@@ -28,6 +28,7 @@ final class LoaderView: UIImageView {
     // MARK: -  Functions
 
     private func configureUserInterface() {
+        // TODO: - Give more time, I'd update the load to be able to render dynamic number of rows
         image = UIImage(named: "loader")
 
         contentMode = .scaleToFill

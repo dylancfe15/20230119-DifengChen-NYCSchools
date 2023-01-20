@@ -21,6 +21,7 @@ final class SchoolListViewModel {
 
     /// Fetch a list of schools from the server
     func getSchools() {
+        // TODO: - Given more time, I'd implement pagination, but this requires working with the backend team.
         networkManager.getSchools { [weak self] schools in
             self?.schools = schools ?? []
             self?.schoolsPublisher.send(schools)

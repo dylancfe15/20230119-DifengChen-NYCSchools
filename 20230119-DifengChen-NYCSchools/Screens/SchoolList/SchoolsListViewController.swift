@@ -99,6 +99,7 @@ final class SchoolsListViewController: UIViewController {
     }
 
     private func presentSerivceErrorAlert() {
+        // TODO: - Given more time, I'd allow the alert to display different messages based on the error
         let alert = UIAlertController(title: "Error", message: "Ops! Something went wrong while loading the data.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { [weak self] _ in

@@ -24,6 +24,7 @@ final class SchoolListNetworkManager: SchoolListNetworkManaging {
         request.httpMethod = "GET"
 
         let task = URLSession.shared.dataTask(with: request) { data, _, _ in
+            // TODO: - Give more time, I'd handle different status code
             guard let data = data,
                     let schools = try? JSONDecoder().decode([School].self, from: data) else {
                 completion(nil)

@@ -6,6 +6,7 @@ This app displays a list of NYC schools with details.
 
 # Highlights
 
+- Follow JPMC Swift Coding Style Guidelines
 - Coordinator & MVVM Design Pattern
 - Production & Development Configurations
 - Combine

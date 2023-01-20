@@ -101,6 +101,10 @@ final class SchoolsListViewController: UIViewController {
     private func presentSerivceErrorAlert() {
         let alert = UIAlertController(title: "Error", message: "Ops! Something went wrong while loading the data.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { [weak self] _ in
+            self?.viewModel.getSchools()
+        }))
+
         present(alert, animated: true, completion: nil)
     }
 }

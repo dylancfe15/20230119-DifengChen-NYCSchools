@@ -8,7 +8,8 @@ This app displays a list of NYC schools with details.
 
 - Coordinator Design Pattern
 - MVVM Design Pattern
-- Loading Animation
+- Production & Development Configurations
 - Combine
 - Unit Testing
 - SwiftUI & UIKit
+- Loading Animation
